@@ -6,9 +6,6 @@ import ImgList from './Components/ImgList';
 
 import cred from './cred.js';
 
-console.log(cred);
-
-
 // import Unsplash from 'unsplash-js';
 
 // const unsplash = new Unsplash({
@@ -48,9 +45,9 @@ export default class App extends Component {
 		// 		console.log('Error happened during fetching!', err);
 		// 	});
 		fetch('https://api.unsplash.com/photos/?client_id=' + cred.APP_ID)
-			.then(toJson => toJson.json())
-			.then(json => {
-				this.setState({ imgs: json });
+			.then(res => res.json())
+			.then(data => {
+				this.setState({ imgs: data });
 			})
 			.catch(err => {
 				console.log('Error happened during fetching!', err);
@@ -58,7 +55,6 @@ export default class App extends Component {
 	}
 
 	render() {
-		// console.log('state:' + this.state.imgs);
 		return (
 			<div>
 				<div className="main-header">
