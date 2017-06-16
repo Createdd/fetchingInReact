@@ -1,9 +1,15 @@
+// import 'dotenv/config';
 import React, { Component } from 'react';
 import './App.css';
 import SearchForm from './Components/SearchForm';
 import ImgList from './Components/ImgList';
 
-import Unsplash from 'unsplash-js';
+import cred from './cred.js';
+
+console.log(cred);
+
+
+// import Unsplash from 'unsplash-js';
 
 // const unsplash = new Unsplash({
 // 	applicationId: process.env.APP_ID,
@@ -41,9 +47,7 @@ export default class App extends Component {
 		// 	.catch(err => {
 		// 		console.log('Error happened during fetching!', err);
 		// 	});
-		fetch(
-			'https://api.unsplash.com/photos/?client_id=d3cfd3b8997abcd4c3fbe668a6c654a71412bcc7512710f116a76e7b095bfad8'
-		)
+		fetch('https://api.unsplash.com/photos/?client_id=' + cred.APP_ID)
 			.then(toJson => toJson.json())
 			.then(json => {
 				this.setState({ imgs: json });
@@ -54,7 +58,7 @@ export default class App extends Component {
 	}
 
 	render() {
-		console.log('state:' + this.state.imgs);
+		// console.log('state:' + this.state.imgs);
 		return (
 			<div>
 				<div className="main-header">
@@ -64,7 +68,7 @@ export default class App extends Component {
 					</div>
 				</div>
 				<div className="main-content">
-					<ImgList />
+					<ImgList data={this.state.imgs} />
 				</div>
 			</div>
 		);

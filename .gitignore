@@ -1,3 +1,2 @@
-/other
 /node_modules
-.env
+/src/cred.js

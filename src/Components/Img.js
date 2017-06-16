@@ -2,7 +2,7 @@ import React from 'react';
 
 const Img = props => (
   <li className="img-wrap">
-    <img alt=""/>
+    <img src={props.url} alt=""/>
   </li>
 );
 
