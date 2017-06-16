@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import SearchForm from './Components/SearchForm';
-import GifList from './Components/GifList';
+import ImgList from './Components/ImgList';
 
 export default class App extends Component {
   
@@ -14,12 +14,12 @@ export default class App extends Component {
       <div>
         <div className="main-header">
           <div className="inner">
-            <h1 className="main-title">GifSearch</h1>
+            <h1 className="main-title">ImageSearch</h1>
             <SearchForm />      
           </div>   
         </div>    
         <div className="main-content">
-          <GifList />
+          <ImgList />
         </div>
       </div>
     );
