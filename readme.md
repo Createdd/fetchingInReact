@@ -14,7 +14,8 @@ A simple example on how to fetch data from Unsplash.com in React.
 Article on [Github](https://github.com/DDCreationStudios/Writing/blob/master/articles/FetchingInReact.md)
 
 
-Check out my [post on medium.com](https://medium.com/@ddcreationstudi)
+Check out my post on [Medium](https://medium.com/@ddcreationstudi) or [Hashnode](https://hashnode.com/@DDCreationStudio)
+
 
 You can find a similar, better explained tutorial at treehouse:
 <a href="http://referrals.trhou.se/danieldeutsch3" target="_blank"><img src="https://static.teamtreehouse.com/assets/content/referral-badge-grn.png" height="150"/></a>
