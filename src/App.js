@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
 import './App.css';
 import ImgList from './Components/ImgList';
-
 import cred from './cred.js';
 
 export default class App extends Component {
@@ -13,10 +14,10 @@ export default class App extends Component {
 	}
 
 	componentDidMount() {
-		fetch('https://api.unsplash.com/photos/?client_id=' + cred.APP_ID)
-			.then(res => res.json())
+		axios
+			.get('https://api.unsplash.com/photos/?client_id=' + cred.APP_ID)
 			.then(data => {
-				this.setState({ imgs: data });
+				this.setState({ imgs: data.data });
 			})
 			.catch(err => {
 				console.log('Error happened during fetching!', err);
