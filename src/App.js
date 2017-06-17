@@ -10,17 +10,22 @@ export default class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			imgs: []
+			imgs: [],
+			loadingState: true
 		};
 	}
 
-	performSearch = query => {
+	componentDidMount() {
+		this.performSearch();
+	}
+
+	performSearch = (query = 'sun') => {
 		axios
 			.get(
 				`https://api.unsplash.com/search/photos/?page=1&per_page=10&query=${query}&client_id=${cred.APP_ID}`
 			)
 			.then(data => {
-				this.setState({ imgs: data.data.results });
+				this.setState({ imgs: data.data.results, loadingState: false });
 			})
 			.catch(err => {
 				console.log('Error happened during fetching!', err);
@@ -37,7 +42,9 @@ export default class App extends Component {
 					</div>
 				</div>
 				<div className="main-content">
-					<ImgList data={this.state.imgs} />
+					{this.state.loadingState
+						? <p>Loading</p>
+						: <ImgList data={this.state.imgs} />}
 				</div>
 			</div>
 		);
