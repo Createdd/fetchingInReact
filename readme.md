@@ -11,8 +11,11 @@
 A simple example on how to fetch data from Unsplash.com in React.
 ---
 
-Article on [Github](https://github.com/DDCreationStudios/Writing/blob/master/articles/FetchingInReact.md)
 
+<img src="./public/Screenshot1.png" alt=""/>
+<img src="./public/Screenshot2.png" alt=""/>
+
+Article on [Github](https://github.com/DDCreationStudios/Writing/blob/master/articles/FetchingInReact.md)
 
 Check out my post on [Medium](https://medium.com/@ddcreationstudi) or [Hashnode](https://hashnode.com/@DDCreationStudio)
 
